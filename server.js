@@ -1,9 +1,9 @@
 const express = require('express');
 const morgan = require('morgan');
-const blogPostRouter = require('./blogPostRouter');
+const blogApiRouter = require('./blogApiRouter');
 const app = express();
 app.use(morgan('common'));
-app.use('/blog-posts', blogPostRouter);
+app.use('/blog-posts', blogApiRouter);
 
 app.listen(process.env.PORT || 8080, () => {
     console.log(`Your app is listening on port ${process.env.PORT || 8080}`);
