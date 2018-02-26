@@ -1,10 +1,10 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const {app, closeServer, runServer} = require('../server');
+const {app, runServer, closeServer} = require('../server');
 const expect = chai.expect;
 chai.use(chaiHttp);
 
-describe('blogPosts', function() {
+describe('Blog Posts', function() {
     before(function() {
         return runServer();
     });
