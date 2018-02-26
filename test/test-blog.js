@@ -4,7 +4,7 @@ const {app, closeServer, runServer} = require('../server');
 const expect = chai.expect;
 chai.use(chai.Http);
 
-describe(blogPosts, function() {
+describe('blogPosts', function() {
     before(function() {
         return runServer();
     });
@@ -12,7 +12,7 @@ describe(blogPosts, function() {
         return closeServer();
     });
     it('should return a blog post on GET', function() {
-        return chai.request(server)
+        return chai.request(app)
         .get('/blog-posts')
         .then(function(res) {
             expect(res).to.have.status(200);
