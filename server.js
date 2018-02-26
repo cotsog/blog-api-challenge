@@ -4,6 +4,10 @@ const blogApiRouter = require('./blogApiRouter');
 const app = express();
 app.use(morgan('common'));
 app.use('/blog-posts', blogApiRouter);
+app.get("/", (req, res) => {
+    const message = 'Hello World';
+    res.send(message);
+});
 
 // app.listen(process.env.PORT || 8080, () => {
 //     console.log(`Your app is listening on port ${process.env.PORT || 8080}`);
