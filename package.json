@@ -1,5 +1,5 @@
 {
-  "name": "blog-app-challenge",
+  "name": "blog-api-challenge",
   "version": "0.0.1",
   "description": "testing with mocha, chai",
   "main": "server.js",
