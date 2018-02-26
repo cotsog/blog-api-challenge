@@ -18,8 +18,8 @@ describe('blogPosts', function() {
             expect(res).to.have.status(200);
             expect(res).to.be.json;
             expect(res.body).to.be.a('array');
-            expect(res.body.length).to.be.at.least(1);
-            const expectKeys = ['title', 'content', 'author'];
+            expect(res.body.length).to.be.above(0);
+            const expectKeys = ['id', 'title', 'content', 'author', 'publishDate'];
             res.body.forEach(function(item) {
                 expect(item).to.be.a('object');
                 expect(item).to.include.keys(expectKeys);
