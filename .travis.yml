@@ -1,5 +1,6 @@
 language: node_js
 node_js: node
+before_script: chmod +x ./node_modules/.bin/mocha
 # deploy:
 #   app: polar-headland-44144
 #   provider: heroku
